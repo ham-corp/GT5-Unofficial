@@ -445,7 +445,8 @@ public class MTELargeHadronCollider extends MTEBeamMultiBase<MTELargeHadronColli
     public String[] getInfoData() {
 
         if (cachedOutputParticle == null) {
-            return new String[]{EnumChatFormatting.GRAY + StatCollector.translateToLocal("gt.blockmachines.multimachine.beamcrafting.machineoff") };
+            return new String[] { EnumChatFormatting.GRAY
+                + StatCollector.translateToLocal("gt.blockmachines.multimachine.beamcrafting.machineoff") };
         }
 
         BeamLinePacket dataPacket = new BeamLinePacket(cachedOutputParticle);
@@ -683,13 +684,12 @@ public class MTELargeHadronCollider extends MTEBeamMultiBase<MTELargeHadronColli
                 continue;
             }
 
-            if (rate == 0){
+            if (rate == 0) {
                 o.dataPacket = null;
                 continue;
             }
 
-            o.dataPacket = new BeamLinePacket(
-                new BeamInformation(this.outputEnergy, rate, rolledId, this.outputFocus));
+            o.dataPacket = new BeamLinePacket(new BeamInformation(this.outputEnergy, rate, rolledId, this.outputFocus));
         }
     }
 
