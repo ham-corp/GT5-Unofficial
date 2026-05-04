@@ -610,7 +610,7 @@ public class MTELargeHadronCollider extends MTEBeamMultiBase<MTELargeHadronColli
 
             Particle outputParticle = Particle.getParticleFromId(this.outputParticleID);
             float outputMass = outputParticle.getMass();
-            this.outputRate = (int) max(0, (1 - (outputMass / this.outputEnergy)) * (inputRate));
+            this.outputRate = max(0, (inputRate));
 
             this.outputFocus = inputFocus;
 
