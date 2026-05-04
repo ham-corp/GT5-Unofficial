@@ -444,6 +444,10 @@ public class MTELargeHadronCollider extends MTEBeamMultiBase<MTELargeHadronColli
     @Override
     public String[] getInfoData() {
 
+        if (cachedOutputParticle == null) {
+            return new String[]{EnumChatFormatting.GRAY + StatCollector.translateToLocal("gt.blockmachines.multimachine.beamcrafting.machineoff") };
+        }
+
         BeamLinePacket dataPacket = new BeamLinePacket(cachedOutputParticle);
 
         return new String[] {
